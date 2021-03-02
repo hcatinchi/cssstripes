@@ -1,0 +1,61 @@
+body {
+  margin: 0px;
+}
+
+.section {
+  padding: 100px 20px;
+  /*background-color: gray;*/
+  position: relative; /*to work with [position: absolute] on [.shape-one]*/
+  overflow: hidden; /*to trim edges of a section (upper right)*/
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 50px 80px;
+  box-shadow: 0 30px 60px -12px rgb(50 50 93 / 25%),
+    0 18px 36px -18px rgb(0 0 0 / 30%), 0 -12px 36px -8px rgb(0 0 0 / 3%);
+}
+
+.shapes {
+  transform: skewY(-12deg);
+  transform: skewY(-12deg);
+  z-index: -1; /*to work with overlaps*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+}
+
+.shape-one {
+  position: absolute; /*take an element outside the natural flow of the web, the content will overlap. Absolute will look for it nearest ancestor that's positioned wich is the div with the class of section. Works with [position: relative] on [.section]*/
+  top: 100px;
+  left: 0;
+  right: 5%;
+  background-color: #42a5f5;
+  height: 80px;
+  /*z-index: -1; /*to work with overlaps*/
+}
+
+.shape-two {
+  position: absolute; /*take an element outside the natural flow of the web, the content will overlap. Absolute will look for it nearest ancestor that's positioned wich is the div with the class of section. Works with [position: relative] on [.section]*/
+  top: 180px;
+  left: 5%;
+  right: 0%;
+  background-color: #4527a0;
+  height: 80px;
+  /*z-index: -1; /*to work with overlaps*/
+}
+
+.shape-three {
+  position: absolute; /*take an element outside the natural flow of the web, the content will overlap. Absolute will look for it nearest ancestor that's positioned wich is the div with the class of section. Works with [position: relative] on [.section]*/
+  top: 260px;
+  left: 10%;
+  right: 0%;
+  background-color: #aed581;
+  height: 80px;
+  /*z-index: -1; /*to work with overlaps*/
+}
